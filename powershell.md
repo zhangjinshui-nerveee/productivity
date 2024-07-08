@@ -44,3 +44,8 @@ Write-Host "Compilation finished. PDF generated as '$baseName.pdf'."
 
 ii "$baseName.pdf"
 ```
+
+## Setting up Sumatra for inverse search
+```
+vim +%l "%f"
+```
