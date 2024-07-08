@@ -1,5 +1,6 @@
 # Script to automatically compile latex files, prune log files, open compiled pdf. 
 
+```ps1
 param (
     [string]$fileName
 )
@@ -42,3 +43,4 @@ foreach ($file in $auxFiles) {
 Write-Host "Compilation finished. PDF generated as '$baseName.pdf'."
 
 ii "$baseName.pdf"
+```
