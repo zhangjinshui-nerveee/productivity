@@ -1,2 +1,2 @@
-# powershell-personal
-Personal usage of power shell
+# readme
+Note for skills that are useful to me. 
