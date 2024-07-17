@@ -15,4 +15,4 @@
 - FPGA module
 - CompactRIO device driver
 
-
+- [ ] connect to syncthing server 
