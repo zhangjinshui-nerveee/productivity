@@ -1,5 +1,26 @@
 # Use vim as my only editor
 
+## Setting terminal
+### Setting powershell 7 as default terminal
+```
+set shell=pwsh
+set shellcmdflag=-c
+set shellquote=\"
+set shellxquote=
+```
+` set shell=powershell ` will set powershell 5 as default
+
+### vim-plug to manage vim plugins
+```
+call plug#begin()
+" List your plugins here
+Plug 'tpope/vim-sensible'
+Plug 'gcmt/taboo.vim'
+Plug 'preservim/nerdtree'
+call plug#end()
+```
+
+
 ## Text (writing) 
 - installing texlive to compile offline
 
