@@ -2,7 +2,7 @@
 
 ```ps1
 param (
-    [string]$fileName
+    [string]$fileName = 'main.tex'
 )
 
 # Check if the file exists
@@ -18,7 +18,7 @@ $baseName = [System.IO.Path]::GetFileNameWithoutExtension($fileName)
 
 # Compile the LaTeX file using pdflatex
 Write-Host "Compiling LaTeX file..."
-& pdflatex -interaction=nonstopmode $fileName
+& pdflatex -interaction=nonstopmode $fileName > nul
 
 # Run biblatex for references
 Write-Host "Running biblatex..."
@@ -27,8 +27,8 @@ Write-Host "Running biblatex..."
 
 # Compile the LaTeX file again (twice) to ensure references are updated
 Write-Host "Finalizing compilation..."
-& pdflatex -interaction=nonstopmode $fileName
-& pdflatex -interaction=nonstopmode $fileName
+& pdflatex -interaction=nonstopmode $fileName > nul
+& pdflatex -interaction=nonstopmode -synctex=1 $fileName > nul
 
 # Delete auxiliary files
 $auxFiles = @("$baseName.aux", "$baseName.log", "$baseName.out", "$baseName.bbl", "$baseName.blg")
