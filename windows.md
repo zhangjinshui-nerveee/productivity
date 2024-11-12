@@ -8,6 +8,8 @@
 - [x] git
 - [x] github-cli
 - [x] Python. Just download from official website
+- [x] Unable to modify powershell options: 
+    > Copy the shortcut of powershell to another location, e.g. desktop, open it and modify its option. Move it back.
 
 ## LabVIEW
 > For product 9627, necessary:
@@ -15,4 +17,3 @@
 - FPGA module
 - CompactRIO device driver
 
-- [ ] connect to syncthing server 
